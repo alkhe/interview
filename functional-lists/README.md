@@ -2,8 +2,8 @@
 
 ## Metadata
 
-Time: 20-25 minutes
-Role: Senior Frontend Engineer
+- Time: 20-25 minutes
+- Role: Senior Frontend Engineer
 
 ## Introduction
 
@@ -43,7 +43,7 @@ from_array: Array<T> -> List<T>
 to_array: List<T> -> Array<T>
 ```
 
-Do not worry about index out-of-bound errors (assume head and nth will only be called on lists that have values in the requested position).
+Do not worry about index out-of-bound errors (assume `head` and `nth` will only be called on lists that have values in the requested position).
 
 Remember: the data structure should be immutable. This means that `map`, `filter`, and `append` should not modify any of the input lists.
 
