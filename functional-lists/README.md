@@ -48,3 +48,8 @@ Do not worry about index out-of-bound errors (assume `head` and `nth` will only 
 Remember: the data structure should be immutable. This means that `map`, `filter`, and `append` should not modify any of the input lists.
 
 Also, bonus points are assigned for implementing each method in a single return expression.
+
+## Testing
+
+Export your methods in `implementation.js` or `implementation.ts`, and run `yarn test` or `npm run test`.
+

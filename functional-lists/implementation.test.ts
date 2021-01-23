@@ -1,4 +1,4 @@
-import { list, head, tail, nth, map, filter, foldl, foldr, append, compare, to_array, from_array } from './implementation'
+import { list, head, tail, nth, map, filter, foldl, foldr, append, compare, from_array, to_array } from './implementation'
 
 test('creates list and can retrieve head and tail', () => {
   const l = list(1, list(2, null))
