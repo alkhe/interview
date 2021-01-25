@@ -7,9 +7,9 @@
 
 ## Introduction
 
-This challenge tests your familiarity with concepts in the functional paradigm such as higher-order functions and immutability. Many real-world Javascript interfaces take callbacks, such as the Promise, Node's Filesystem API, and event handling mechanisms on the DOM or in modern web frameworks like React. As a frontend engineer you will often need to filter relevant data for a display, then map a renderer over that data to produce a set of elements that the view layer can consume. Lastly, folding (reducing) and immutable data structures are crucial elements of state manage frameworks like Redux or Cycle.js.
+This challenge tests your familiarity with the functional paradigm, dealing with concepts like higher-order functions and immutable data structures. Many real-world Javascript interfaces like the Promise, Node's Filesystem API, and DOM event systems use callbacks to implement reactive behaviors. As a frontend engineer you will also often need to filter relevant data for a display and then map a renderer over that data to produce a set of elements that the view layer can consume. Lastly, folding (reducing) and immutable data structures are crucial elements of state management frameworks like Redux or Cycle.js.
 
-Your task is to implement the immutable singly-linked list, but with a special restriction: you must store the data using just closures, and are otherwise not allowed to use Object, Array, prototypes, or classes to structure your data. This strips the task down to its purest form, whose solution is reminiscent of functional programming languages like Lisp, Haskell, and OCaml.
+Your task is to implement the immutable singly-linked list, with a special restriction: you must structure the data using only closures, and are otherwise not allowed to use Object, Array, prototypes, or classes for storage. This strips the task down to its purest form, whose solution is reminiscent of functional programming languages like Lisp, Haskell, and OCaml.
 
 ## Specification
 
@@ -39,17 +39,16 @@ foldl: (List<T>, (A, T) -> A, A) -> A
 foldr: (List<T>, (A, T) -> A, A) -> A
 append: (List<T>, List<T>) -> List<T>
 compare: (List<T>, List<T>) -> Boolean
-from_array: Array<T> -> List<T>
-to_array: List<T> -> Array<T>
+from_array: T[] -> List<T>
+to_array: List<T> -> T[]
 ```
 
 Do not worry about index out-of-bound errors (assume `head` and `nth` will only be called on lists that have values in the requested position).
 
-Remember: the data structure should be immutable. This means that `map`, `filter`, and `append` should not modify any of the input lists.
+As the data structure is immutable, `map`, `filter`, and `append` should not modify any of the input lists.
 
 Also, bonus points are assigned for implementing each method in a single return expression.
 
 ## Testing
 
 Export your methods in `implementation.js` or `implementation.ts`, and run `yarn test` or `npm run test`.
-
