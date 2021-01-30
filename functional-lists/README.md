@@ -7,9 +7,9 @@
 
 ## Introduction
 
-This challenge tests your familiarity with the functional paradigm, dealing with concepts like higher-order functions and immutable data structures. Many real-world Javascript interfaces like the Promise, Node's Filesystem API, and DOM event systems use callbacks to implement reactive behaviors. As a frontend engineer you will also often need to filter relevant data for a display and then map a renderer over that data to produce a set of elements that the view layer can consume. Lastly, folding (reducing) and immutable data structures are crucial elements of state management frameworks like Redux or Cycle.js.
+This challenge tests your familiarity with the functional paradigm, dealing with concepts like higher-order functions and persistent data structures. Many real-world Javascript interfaces like the Promise, Node's Filesystem API, and DOM event systems use callbacks to implement reactive behaviors. As a frontend engineer you will also often need to filter relevant data for a display and then map a renderer over that data to produce a set of elements that the view layer can consume. Lastly, folding and persistence are crucial elements of state management frameworks like Redux or Cycle.js.
 
-Your task is to implement the immutable singly-linked list, with a special restriction: you must structure the data using only closures, and are otherwise **<ins>not allowed to use Object, Array, prototypes, or classes for storage</ins>**. This strips the task down to its purest form, whose solution is reminiscent of functional programming languages like Lisp, Haskell, and OCaml.
+Your task is to implement the persistent, singly-linked list, with a special restriction: you must structure the data using only closures, and are otherwise **<ins>not allowed to use Object, Array, prototypes, or classes for storage</ins>**. This strips the task down to its purest form, whose solution is reminiscent of functional programming languages like Lisp, Haskell, and OCaml.
 
 ## Specification
 
@@ -45,7 +45,7 @@ to_array: List<T> -> T[]
 
 Do not worry about index out-of-bound errors (assume `head`, `tail`, and `nth` will only be called on lists that have values in the requested position).
 
-As the data structure is immutable, `map`, `filter`, and `append` should not modify any of the input lists.
+As the data structure is persistent, `map`, `filter`, and `append` should not modify any of the input lists.
 
 Also, bonus points are assigned for implementing each method in a single return expression.
 
