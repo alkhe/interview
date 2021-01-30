@@ -1,11 +1,12 @@
 import { list, head, tail, nth, map, filter, foldl, foldr, append, compare, from_array, to_array } from './implementation.js'
 
 test('creates list and can retrieve head and tail', () => {
-  const l = list(1, list(2, null))
+  const l = list(1, list(2, list(3, null)))
 
   expect(head(l)).toBe(1)
   expect(head(tail(l))).toBe(2)
-  expect(tail(tail(l))).toBe(null)
+  expect(head(tail(tail(l)))).toBe(3)
+  expect(tail(tail(tail(l)))).toBe(null)
 })
 
 test('has persistence', () => {
