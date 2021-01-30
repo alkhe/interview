@@ -9,7 +9,7 @@
 
 This challenge tests your familiarity with the functional paradigm, dealing with concepts like higher-order functions and persistent data structures. Many real-world Javascript interfaces like the Promise, Node's Filesystem API, and DOM event systems use callbacks to implement reactive behaviors. As a frontend engineer you will also often need to filter relevant data for a display and then map a renderer over that data to produce a set of elements that the view layer can consume. Lastly, folding and persistence are crucial elements of state management frameworks like Redux or Cycle.js.
 
-Your task is to implement the persistent, singly-linked list, with a special restriction: you must structure the data using only closures, and are otherwise **<ins>not allowed to use Object, Array, prototypes, or classes for storage</ins>**. This strips the task down to its purest form, whose solution is reminiscent of functional programming languages like Lisp, Haskell, and OCaml.
+Your task is to implement the persistent, singly-linked list, with a special restriction: you must structure the data using only closures. **<ins>Do not use objects, arrays, prototypes, or classes for storage.</ins>** This strips the task down to its purest form, whose solution is reminiscent of functional programming languages like Lisp, Haskell, and OCaml.
 
 ## Specification
 
