@@ -8,6 +8,13 @@ test('creates list and can retrieve head and tail', () => {
   expect(tail(tail(l))).toBe(null)
 })
 
+test('has persistence', () => {
+  const l1 = list(2, list(3, null))
+  const l2 = list(1, l1)
+
+  expect(tail(l2)).toBe(l1)
+})
+
 test('can compare lists', () => {
   const l1 = list(1, list(2, list(3, list(4, list(5, null)))))
   const l2 = list(1, list(2, list(3, list(4, list(5, null)))))
