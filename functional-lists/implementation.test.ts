@@ -50,6 +50,7 @@ test('can map over list', () => {
   const l2 = from_array(['1', '2', '3', '4', '5'])
 
   expect(compare(map(l1, String), l2)).toBe(true)
+  expect(map(null, () => true)).toBe(null)
 })
 
 test('can filter over list', () => {
@@ -57,18 +58,21 @@ test('can filter over list', () => {
   const l2 = from_array([1, 3, 5])
 
   expect(compare(filter(l1, x => (x & 1) === 1), l2)).toBe(true)
+  expect(filter(null, x => true)).toBe(null)
 })
 
 test('can foldl over list', () => {
   const l = from_array(['a', 'b', 'c'])
 
-  expect(foldl(l, (s1, s2) => s1 + s2, '')).toEqual('abc')
+  expect(foldl(l, (xs, s) => xs.concat([s]), []).join('')).toEqual('abc')
+  expect(foldl(null, (a, x) => null, true)).toBe(true)
 })
 
 test('can foldr over list', () => {
   const l = from_array(['a', 'b', 'c'])
 
-  expect(foldr(l, (s1, s2) => s1 + s2, '')).toEqual('cba')
+  expect(foldr(l, (xs, s) => xs.concat([s]), []).join('')).toEqual('cba')
+  expect(foldr(null, (a, x) => null, true)).toBe(true)
 })
 
 test('can append two lists', () => {
