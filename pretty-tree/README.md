@@ -54,7 +54,7 @@ const v = tree(1,
 )
 ```
 
-Please implement the method a method with the interface `Tree<number> -> string` that produces the following output for the trees given above:
+Please implement a method with the interface `Tree<number> -> string` that produces the following output for the trees given above:
 
 ```
    1   
