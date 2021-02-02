@@ -71,7 +71,7 @@ Please implement a method with the interface `Tree<number> -> string` that produ
 3   44 66  777
 ```
 
-- Rows in the output should have uniform width. That is, very row should be as wide as the widest row. Fill with spaces as necessary.
+- Rows in the output should have uniform width. That is, every row should be as wide as the widest row. Fill with spaces as necessary.
 - The `tree` method used above can be found in `tree.js`.
 - Types are provided in `tree.d.ts`.
 - Trees t, u, and v can be found in the test file.
