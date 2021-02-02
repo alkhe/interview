@@ -13,13 +13,9 @@ Your task is to write a pretty-printer for binary trees. You will need to analyz
 
 ## Specification
 
-You are given the following code:
+You are given the following trees:
 
 ```js
-function tree(value, left = null, right = null) {
-  return { value, left, right }
-}
-
 const t = tree(1,
   tree(2,
     tree(4),
@@ -58,20 +54,25 @@ const v = tree(1,
 )
 ```
 
-Please implement the method `pretty_print: Tree<number> -> string` that produces the following output for the trees given above:
+Please implement the method a method with the interface `Tree<number> -> string` that produces the following output for the trees given above:
 
 ```
-   1
- 2   3
+   1   
+ 2   3 
 4 5 6 7
 
-      1
+      1  
    2    3
- 4   5 6
-7 8 9
+ 4   5 6 
+7 8 9    
 
-      1
- 222     55
+      1       
+ 222     55   
 3   44 66  777
 ```
+
+- Rows in the output should have uniform width. That is, very row should be as wide as the widest row. Fill with spaces as necessary.
+- The `tree` method used above can be found in `tree.js`.
+- Types are provided in `tree.d.ts`.
+- Trees t, u, and v can be found in the test file.
 
