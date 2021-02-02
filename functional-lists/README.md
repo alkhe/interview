@@ -13,7 +13,7 @@ Your task is to implement the persistent, singly-linked list, with a special res
 
 ## Specification
 
-Please implement the following methods, in the specified complexity class:
+Please implement the following methods in the specified complexity class:
 - `list`: construct a new list that holds the given value and points to the given list (the tail) `O(1) constant`
 - `head`: return the value stored at the head of a list `O(1) constant`
 - `tail`: return the tail of a list `O(1) constant`
@@ -32,23 +32,19 @@ The interfaces for the methods are as follows:
 list: (T, List<T>) -> List<T>
 head: List<T> -> T
 tail: List<T> -> List<T>
-nth: (List<T>, Number) -> T
+nth: (List<T>, number) -> T
 map: (List<T>, T -> U) -> List<U>
-filter: (List<T>, T -> Boolean) -> List<T>
+filter: (List<T>, T -> boolean) -> List<T>
 foldl: (List<T>, (A, T) -> A, A) -> A
 foldr: (List<T>, (A, T) -> A, A) -> A
 append: (List<T>, List<T>) -> List<T>
-compare: (List<T>, List<T>) -> Boolean
+compare: (List<T>, List<T>) -> boolean
 from_array: T[] -> List<T>
 to_array: List<T> -> T[]
 ```
 
-Do not worry about index out-of-bound errors (assume `head`, `tail`, and `nth` will only be called on lists that have values in the requested position).
+- Do not worry about index out-of-bound errors (assume `head`, `tail`, and `nth` will only be called on lists that have values in the requested position)
+- However, you still need to support empty lists.
+- As the data structure is persistent, `map`, `filter`, and `append` should not modify any of the input lists.
+- Also, bonus points are assigned for implementing each method in a single return expression.
 
-As the data structure is persistent, `map`, `filter`, and `append` should not modify any of the input lists.
-
-Also, bonus points are assigned for implementing each method in a single return expression.
-
-## Testing
-
-Export your methods in `implementation.js` or `implementation.ts`, and run `yarn test` or `npm run test`.
